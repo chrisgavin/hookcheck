@@ -1,0 +1,20 @@
+language: python
+python:
+  - "3.5"
+  - "3.6"
+
+install: pip install tox-travis
+script: tox
+
+deploy:
+  provider: pypi
+  skip_existing: true
+  user: chrisgavin
+  password:
+    secure: "GwMIkXKRmIOMN0jWdozPBac6Ds6apaA0m74Ad0zpwbdu164POVU4ojlFInPg1CqWRm+gDKXApSCdeQ+Dbsj/ifp4+x1e4YxfNO8EmzhYoDFmg+eEOa1u9yr9Lkz7ylHw9OPdqqbwm5TH1fDgeIzNYhms/LRuQOr85hNTeQYfZSB1pOc60y+mqmXYgKnMXcUlQkJkhsDrrPjxBNdy58g8aklzuGKynEAzjZDOGZQswFKzZXvmlQs03LywqlTJgUL6q0mgNwHQU60hzf3ta3ur7o+AKdkqOyyIu4+t5zqbwrutKHKtbM5XiuasA4OE/n5gF6WEMudjwZ9YKUnIMk/6YyCIvgxIl8U6yY69vFxS0/ZIp1sKCVThpj3nJP2T/9dazgd42eWUFR3ws1HscisGRwp71Tv7q9kPn0gBwmNMOjCUPj0iDSH9quLtz+PTSdLoy3ZbuS3WrAK+QsuM2k5xrySzriFfK5Th1gUngw9Jj7pUJZ6pP2M49UG3+Y+pgRrH1tSgkjc8Y49zbEIv0PMHyEdqMGI6GsifIuO/VU7wh7R5CZgjCgraFs4JuQ2wqKufILUvXEqr199uP7OPBsQWicfhsNp08jY3mGhmjfO9KFIUhstDExttW9IG5bU2o7p2pBRteQQaq5Dr8WFY0IvqcpLgR7nQ/arBDmHEJNJYrVo="
+  on:
+    tags: true
+
+notifications:
+  slack:
+    secure: "Yao1v3NmHh37alfZnH2ZtV2GWdYCsp4sA8GvekVjPVjFGWMOpFepJEww1GIBUgf+10hj4z+gCjoIvJsiokc9lDsZa3QE39kcEKnYRmfuD5xwb9ZDdSn21rBgYkjJFKu6seXFhbsdwqJcb+N/N5w+wWHwlQhHtdOS2K1naYKHaZMcA2xbxtSeKQmIX+r+HTut65CQas11vfcNSluut+5sUMPvxh2GxDuufiqzXwo4fKv04vtRQwMbiE9kiIEGQquivo/maHRwATmx6RLK+M7qdLROmmiC99s5EnyzvbkU+qvqMIdxrcLYCKWIMJ6l5JA8klLiS/04UHaQ2v/qawifQNQ2PaBJiF60I40Rg/ENr90XNTQOvntxWdkwg4U0r1TvpKQnntF/qtb730uMgS4HYdafmR0DokAramo7Eoi+7RdPAr3siz2d2KPW41B24xt+498w+LGRkShTAywLwnb/2BBgSd1UwapyL3JLz5ijxY8PepipYsbDDruIlG8seFh9qIkxzYxk1KLxtjyPRnnCtOwijSrmtJyvdRcvsdDNoR6p3Uu2iYxl+LxE7G2S1YFSz1W+ItZ1cynKL4FEWKepae/CWyEDhE4xT1dY1wes5d9WucaI+7OE3693aJLkDrnxb2aTxe/nXTg8lK6qisGI7TniDtjTmlnoRGUIkTXYXyU="
